@@ -16,31 +16,25 @@
   <body>
     <main>
       <div class="bd-masthead justify-content-center align-items-center">
-        <div class="col-md-8 mx-auto text-center neu-card">
-          <h1 class="mb-3 fw-semibold lh-1">
-            Input Student's Registration Number Below
+        <div class="col-md-8 mx-auto text-center neu-card" id="result">
+          <h1 class="mb-3 fw-semibold lh-1" id="title">
+            Student's Registration Number Below
           </h1>
 
-          <form class="form-signin w-100 m-auto" action="./result.html">
-            <!-- <h1 class="h3 mb-3 fw-normal">Please sign in</h1> -->
-
-            <div class="form-floating">
-              <input
-                type="text"
-                class="form-control"
-                id="floatingInput"
-                placeholder="Input Student's Registration Number"
-                name="regNo"
-                required
-              />
-              <label for="floatingInput">Reg Number</label>
-            </div>
-            <br />
-            <button class="btn btn-lg btn-primary" type="submit">
-              Get CGPA
-            </button>
-          </form>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Course</th>
+                <th scope="col">Unit</th>
+                <th scope="col">Score</th>
+                <th scope="col">Grade</th>
+              </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+          </table>
           <br />
+          <h3 class="mb-3 fw-semibold lh-1" id="cgpa-result"></h3>
         </div>
       </div>
     </main>
@@ -50,5 +44,9 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./db/db.js"></script>
+    <script src="./js/cgpa-calculator.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
